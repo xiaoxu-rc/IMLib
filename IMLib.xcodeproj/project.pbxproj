@@ -14,9 +14,12 @@
 		48176C442872EC7600395EAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48176C432872EC7600395EAE /* Assets.xcassets */; };
 		48176C472872EC7600395EAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48176C452872EC7600395EAE /* LaunchScreen.storyboard */; };
 		48176C4A2872EC7600395EAE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 48176C492872EC7600395EAE /* main.m */; };
+		C14832F9F7E78FE27D00D5DB /* Pods_IMLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 478F26681A8A25BC83D6B88E /* Pods_IMLib.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		197686A39AC3A3D8D6787191 /* Pods-IMLib.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMLib.debug.xcconfig"; path = "Target Support Files/Pods-IMLib/Pods-IMLib.debug.xcconfig"; sourceTree = "<group>"; };
+		478F26681A8A25BC83D6B88E /* Pods_IMLib.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IMLib.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		48176C342872EC7500395EAE /* IMLib.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IMLib.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48176C372872EC7500395EAE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		48176C382872EC7500395EAE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -29,6 +32,7 @@
 		48176C462872EC7600395EAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		48176C482872EC7600395EAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		48176C492872EC7600395EAE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A44E31EAB8C17CD5E57A3D07 /* Pods-IMLib.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMLib.release.xcconfig"; path = "Target Support Files/Pods-IMLib/Pods-IMLib.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,17 +40,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C14832F9F7E78FE27D00D5DB /* Pods_IMLib.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2704ECD4949E55E04446EA8C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				478F26681A8A25BC83D6B88E /* Pods_IMLib.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		48176C2B2872EC7500395EAE = {
 			isa = PBXGroup;
 			children = (
 				48176C362872EC7500395EAE /* IMLib */,
 				48176C352872EC7500395EAE /* Products */,
+				A5A7054CA76CEF761D81F159 /* Pods */,
+				2704ECD4949E55E04446EA8C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,6 +91,15 @@
 			path = IMLib;
 			sourceTree = "<group>";
 		};
+		A5A7054CA76CEF761D81F159 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				197686A39AC3A3D8D6787191 /* Pods-IMLib.debug.xcconfig */,
+				A44E31EAB8C17CD5E57A3D07 /* Pods-IMLib.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -83,9 +107,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 48176C4D2872EC7600395EAE /* Build configuration list for PBXNativeTarget "IMLib" */;
 			buildPhases = (
+				A159E2ED9204B0AB39713A02 /* [CP] Check Pods Manifest.lock */,
 				48176C302872EC7500395EAE /* Sources */,
 				48176C312872EC7500395EAE /* Frameworks */,
 				48176C322872EC7500395EAE /* Resources */,
+				1B67B775CFA8AFD16D20AC28 /* [CP] Embed Pods Frameworks */,
+				7830B254A0E0B779CDE10481 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -140,6 +167,65 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1B67B775CFA8AFD16D20AC28 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IMLib/Pods-IMLib-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IMLib/Pods-IMLib-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-IMLib/Pods-IMLib-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7830B254A0E0B779CDE10481 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IMLib/Pods-IMLib-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IMLib/Pods-IMLib-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-IMLib/Pods-IMLib-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A159E2ED9204B0AB39713A02 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IMLib-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		48176C302872EC7500395EAE /* Sources */ = {
@@ -287,12 +373,14 @@
 		};
 		48176C4E2872EC7600395EAE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 197686A39AC3A3D8D6787191 /* Pods-IMLib.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9CVMN4UZK4;
+				ENABLE_BITCODE = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = IMLib/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -300,6 +388,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -314,6 +403,7 @@
 		};
 		48176C4F2872EC7600395EAE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A44E31EAB8C17CD5E57A3D07 /* Pods-IMLib.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -327,6 +417,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
